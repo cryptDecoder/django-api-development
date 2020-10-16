@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from django.http import HttpResponse, JsonResponse
+from rest_framework import viewsets
 
-# Create your views here.
+
+class DailyUpdatesViewsets(viewsets.ModelViewSet):
+    def list(self, request):
+        return JsonResponse({'Hello': 'This is daily updates'})
+        pass

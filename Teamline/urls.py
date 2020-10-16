@@ -18,5 +18,12 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('chat/', include('chat_application.urls'), name="Chat Application"),
+    path('daily-updates/', include('daily_updates.urls'), name="Daily Updates"),
+    path('expenses/', include('expenses_management.urls'), name="Expenses Management"),
+    path('projects/', include('project_management.urls'), name="Project Management"),
+    path('tasks/', include('task_management.urls'), name="Task Management"),
+    path('users/', include('user_operations.urls'), name="User Management"),
+    path('report/', include('work_report.urls'), name='Work Report')
 
 ]

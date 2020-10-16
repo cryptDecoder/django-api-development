@@ -26,7 +26,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-
 INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.admin',
@@ -35,9 +34,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'user_operations.apps.UserOperationsConfig',
     'rest_framework',
-    'project_management.apps.ProjectManagementConfig'
+    'user_operations.apps.UserOperationsConfig',
+    'project_management.apps.ProjectManagementConfig',
+    'chat_application.apps.ChatApplicationConfig',
+    'daily_updates.apps.DailyUpdatesConfig',
+    'expenses_management.apps.ExpensesManagementConfig',
+    'task_management.apps.TaskManagementConfig',
 ]
 
 MIDDLEWARE = [
@@ -70,7 +73,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Teamline.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
@@ -80,7 +82,6 @@ DATABASES = {
         'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -100,7 +101,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -113,7 +113,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
