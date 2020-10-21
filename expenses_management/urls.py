@@ -1,8 +1,7 @@
-from rest_framework import routers
-from django.urls import path, include
-from .views import ExpensesViewSet, ExpensesDetailViewSet
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('', ExpensesViewSet.as_view(), name='Expenses'),
-    path('<int:id>', ExpensesDetailViewSet.as_view(), name="expense")
+    path('', views.ExpenseListAPIView.as_view(), name="expenses"),
+    path('<int:id>', views.ExpenseDetailAPIView.as_view(), name="expense"),
 ]
