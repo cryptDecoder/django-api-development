@@ -20,7 +20,7 @@ django-rest-auth==0.9.5
 django-utils-six==2.0
 djangorestframework==3.11.0
 djangorestframework-jwt==1.11.0
-djangorestframework-simplejwt==4.4.0
+djangorestframework-simplejwt==5.5.1
 drf-yasg==1.17.1
 ed25519==1.5
 gunicorn==20.0.4
